@@ -7,7 +7,8 @@ Jquery.
 
 Advance carousel is a simple and superfast plugin to make a "wizard" or a just a caraousel with more customizable options such as
 where you need to perform operations on **create** or on **moving backward / forward** or on **loading or unloading** of a slide.
-
+# Demo
+you may access the demo page here: https://rajputvishal.github.io/jquery-carousel/
 # How to use
 - Include "jquery.carousel.js" in your html but make sure you add it **after** Jquery source files.
 - Once that's done its time to make use caraousel.
