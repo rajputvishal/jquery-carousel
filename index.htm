@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src=".src/js/jquery.carousel.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"></link>
+    <link href="./src/css/jquery.caraousel.css" rel="stylesheet"></link>
+</head>
+<body>
+    <div id="myCaraousel">
+
+    </div>
+    <script>
+        $(function(){
+            $("#myCaraousel").advCarousel({
+                items:[{
+                        onCreate: function(slide) {
+                            var img = $("<img>").attr("src", "./slide1.jpg");
+                            slide.append(img);
+                        },
+                        onLoad: function(currentSlide, oldSlide) {},
+                        onUnLoad: function() {console.log("unloaded slide1")},
+                        class: "slide1",
+                        next: {
+                            nextItem: ".slide2",
+                            class: "pull-right",
+                            onNext: function(data, callback, ref) {
+                                callback.apply(ref, [data]);
+                            },
+                            enabled: true,
+                            text: 'Next',
+                        }
+                    },
+                    {
+                        onCreate: function(slide) {
+                            var img = $("<img>").attr("src", "./slide2.jpg");
+                            slide.append(img);
+                        },
+                        onLoad: function(currentSlide, oldSlide) {},
+                        onUnLoad: function() {console.log("unloaded slide1")},
+                        class: "slide2",
+                        prev: {
+                            prevItem: ".slide1",
+                            class: "pull-left",
+                            onPrev: function(data, callback, ref) {
+                                callback.apply(ref, [data]);
+                            },
+                            enabled: true,
+                            text: 'Previous',
+                        }
+                    }]
+                })
+        })
+    </script>
+</body>
