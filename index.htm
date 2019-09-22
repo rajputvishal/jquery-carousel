@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <head>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src=".src/js/jquery.carousel.js"></script>
+    <script src="src/js/jquery.carousel.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"></link>
-    <link href="./src/css/jquery.caraousel.css" rel="stylesheet"></link>
+    <link href="src/css/jquery.caraousel.css" rel="stylesheet"></link>
 </head>
 <body>
     <div id="myCaraousel">
@@ -14,7 +14,7 @@
             $("#myCaraousel").advCarousel({
                 items:[{
                         onCreate: function(slide) {
-                            var img = $("<img>").attr("src", "./slide1.jpg");
+                            var img = $("<img>").attr("src", "src/img/slide1.jpg");
                             slide.append(img);
                         },
                         onLoad: function(currentSlide, oldSlide) {},
@@ -32,7 +32,7 @@
                     },
                     {
                         onCreate: function(slide) {
-                            var img = $("<img>").attr("src", "./slide2.jpg");
+                            var img = $("<img>").attr("src", "src/img/slide2.jpg");
                             slide.append(img);
                         },
                         onLoad: function(currentSlide, oldSlide) {},
